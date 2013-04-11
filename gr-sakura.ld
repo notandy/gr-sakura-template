@@ -37,12 +37,12 @@ ENTRY(_start)
 /* Do we need any of these for elf?
    __DYNAMIC = 0;    */
 
-/* This memory layout corresponds to the smallest predicted RX600 chip.  */
+/* This memory layout corresponds to R5F563NBDDFP chip used on GR-Sakura.  */
 MEMORY {
 	RAM (w)   : ORIGIN = 0x00000000, LENGTH = 0x00020000 /* 128k */
 	STACK (w) : ORIGIN = 0x00020000, LENGTH = 16 /* top of RAM */
 
-	ROM (w)   : ORIGIN = 0xfff40000, LENGTH = 0x000bffd0 /* 768k */
+	ROM (w)   : ORIGIN = 0xfff00000, LENGTH = 0x000fffd0 /* 1Mb */
 /* This is the largest RX6000: */
 /*	ROM (w)   : ORIGIN = 0xffe00000, LENGTH = 0x001fffd0 */ /* 2Mb */
 }
