@@ -174,7 +174,7 @@ SECTIONS
   PROVIDE (__rx_floating_exception_handler = 0x00000000);
   PROVIDE (__rx_nonmaskable_exception_handler = 0x00000000);
 
-  .vectors (0xFFFFFFD0) :
+  .vectors :
   {
     PROVIDE (__vectors = .);
     LONG (__rx_priviledged_exception_handler);
@@ -189,7 +189,7 @@ SECTIONS
     LONG (0);
     LONG (__rx_nonmaskable_exception_handler);
     LONG (_start);
-  }
+  } > ROM
 
   /* The rest are all not normally part of the runtime image.  */
 
