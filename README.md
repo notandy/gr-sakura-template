@@ -9,6 +9,10 @@ Cross compiler for Renesas RX target, e.g.
     crossdev -t rx-elf -s4
 ### Arch
     pacman -S rx-elf-gcc
+### OS X/All others
+	see https://gist.github.com/graup/5380390
+### KPIT GNURX (untested, and only with registration)
+	see http://kpitgnutools.com
 
 ## Makefile Targets:
 1. make all
